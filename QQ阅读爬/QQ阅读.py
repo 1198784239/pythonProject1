@@ -22,7 +22,7 @@ for i in range(first_char,last_char+1):
     print(newstr)
 
 #a 是不覆盖之前的
-    with open('book.txt','w',encoding='utf-8') as f:
+    with open('book.txt','a',encoding='utf-8') as f:
         f.write(title+'\n')
         f.write(newstr+'\n')
         f.write('\n')
