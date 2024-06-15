@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+<!-- <link href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet" /> -->
+<link href="/static/css/theme.min.css" rel="stylesheet" />
+<meta name="robots" content="all" />
+<meta name="author" content="spiderbuf" />
+<meta name="copyright" content="spiderbuf" />
+<meta name="google-adsense-account" content="ca-pub-4169504979687359">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4169504979687359"
+    crossorigin="anonymous"></script>
+
+<meta name="keywords" content="python,python 爬虫,xpath,selenium,爬虫训练,爬虫攻防,爬虫,反爬,robots,user agent,数据分析,爬虫练习网站,在线工具" />
+<meta name="description" content="加入Python爬虫攻防技术社区，通过游戏化、亲身体验，将你的网络爬虫技能提升到一个新的水平。而这还仅仅是个开始。各类在线工具提升效率。" />
+    <title>网页滚动加载的原理及爬取(JavaScript加密混淆逆向基础)_H03_Python爬虫</title>
+</head>
+
+<body>
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #111927">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://www.spiderbuf.cn" style="color: #ffffff"
+                title="Spiderbuf首页">Spiderbuf</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/tool" style="color: #ffffff" title="在线工具">在线工具</a>
+                </li>
+                <li><a href="/list" style="color: #ffffff" title="进入爬虫练习靶场">进入靶场</a></li>
+                <li><a href="https://space.bilibili.com/387313518/channel/seriesdetail?sid=282719" target="_blank"
+                        style="color: #ffffff" title="视频教程">视频教程</a></li>
+                <li><a href="/tutorial" style="color: #ffffff" title="Python爬虫知识库">知识库</a></li>
+		<li><a href="/guide" style="color: #ffffff" title="Spiderbuf使用指南">使用指南</a></li>
+                <li><a href="/sponsor" title="请作者喝咖啡" style="color: #ffffff"><svg viewBox="0 0 24 24" width="1.2em"
+                            height="1.2em" font-size="16"
+                            class="text-gray-500 hover:text-amber-500 dark:text-gray-400 dark:hover:text-amber-500">
+                            <path fill="currentColor"
+                                d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z">
+                            </path>
+                        </svg></a></li>
+                <li><a href="https://github.com/hhuayuan/spiderbuf" target="_blank" rel="noreferrer" title="GitHub项目主页"
+                        style="color: #ffffff"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" font-size="15"
+                            class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100">
+                            <path fill="currentColor"
+                                d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                            </path>
+                        </svg></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <h1>值得一看的高分电影</h1>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 30px;width: 800px;">
+        </div>
+        <div id="main">
+            
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">
+                    <h2>肖申克的救赎 The Shawshank Redemption</h2></br>
+                    <div class="col-xs-3 col-lg-3">
+                        <img src="/static/images/douban_movie/posters/tt0111161.jpg" alt="肖申克的救赎 The Shawshank Redemption"
+                            class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
+                        <span >豆瓣电影评分:</span> 9.7<br/>
+                        <span ><span>导演</span>: <span>弗兰克·德拉邦特</span></span><br/>
+                        <span ><span>编剧</span>: <span>弗兰克·德拉邦特 </span></span>/弗兰克·德拉邦特 / 斯蒂芬·金<br/>
+                        <span ><span>主演</span>: <span>蒂姆·罗宾斯 </span></span>/蒂姆·罗宾斯 / 摩根·弗里曼 / 鲍勃·冈顿 / 威廉姆·赛德勒 / 克兰西·布朗 / 吉尔·贝罗斯 / 马克·罗斯顿 / 詹姆斯·惠特摩 / 杰弗里·德曼 / 拉里·布兰登伯格 / 尼尔·吉恩托利 / 布赖恩·利比 / 大卫·普罗瓦尔 / 约瑟夫·劳格诺 / 祖德·塞克利拉 / 保罗·麦克兰尼 / 芮妮·布莱恩 / 阿方索·弗里曼 / V·J·福斯特 / 弗兰克·梅德拉诺 / 马克·迈尔斯 / 尼尔·萨默斯 / 耐德·巴拉米 / 布赖恩·戴拉特 / 唐·麦克马纳斯<br/>
+                        <span ><span>类型:</span><span> 剧情 </span></span>/剧情 / 犯罪<br/>
+                        <span ><span>制片国家/地区:</span><span> 美国</span></span><br/>
+                        <span ><span>语言:</span><span> 英语</span></span><br/>
+                        <span ><span>上映日期:</span><span> 1994-09-10(多伦多电影节) </span></span>/1994-09-10(多伦多电影节) / 1994-10-14(美国)<br/>
+                        <span ><span>片长:</span><span> 142分钟</span></span><br/>
+                        <span ><span>又名:</span><span> 月黑高飞(港) </span></span>/月黑高飞(港) / 刺激1995(台) / 地狱诺言 / 铁窗岁月 / 消香克的救赎<br/>
+                        <span >IMDb:</span> tt0111161<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">简介：</br>一场谋杀案使银行家安迪（蒂姆•罗宾斯 Tim Robbins 饰）蒙冤入狱，谋杀妻子及其情人的指控将囚禁他终生。在肖申克监狱的首次现身就让监狱“大哥”瑞德（摩根•弗里曼 Morgan Freeman 饰）对他另眼相看。瑞德帮助他搞到一把石锤和一幅女明星海报，两人渐成患难 之交。很快，安迪在监狱里大显其才，担当监狱图书管理员，并利用自己的金融知识帮助监狱官避税，引起了典狱长的注意，被招致麾下帮助典狱长洗黑钱。偶然一次，他得知一名新入狱的小偷能够作证帮他洗脱谋杀罪。燃起一丝希望的安迪找到了典狱长，希望他能帮自己翻案。阴险伪善的狱长假装答应安迪，背后却派人杀死小偷，让他唯一能合法出狱的希望泯灭。沮丧的安迪并没有绝望，在一个电闪雷鸣的风雨夜，一场暗藏几十年的越狱计划让他自我救赎，重获自由！老朋友瑞德在他的鼓舞和帮助下，也勇敢地奔向自由。</div>
+            </div>
+            
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">
+                    <h2>美丽人生 La vita è bella</h2></br>
+                    <div class="col-xs-3 col-lg-3">
+                        <img src="/static/images/douban_movie/posters/tt0118799.jpg" alt="美丽人生 La vita è bella"
+                            class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
+                        <span >豆瓣电影评分:</span> 9.6<br/>
+                        <span ><span>导演</span>: <span>罗伯托·贝尼尼</span></span><br/>
+                        <span ><span>编剧</span>: <span>温琴佐·切拉米 </span></span>/温琴佐·切拉米 / 罗伯托·贝尼尼<br/>
+                        <span ><span>主演</span>: <span>罗伯托·贝尼尼 </span></span>/罗伯托·贝尼尼 / 尼可莱塔·布拉斯基 / 乔治·坎塔里尼 / 朱斯蒂诺·杜拉诺 / 赛尔乔·比尼·布斯特里克 / 玛丽萨·帕雷德斯 / 霍斯特·布赫霍尔茨 / 利迪娅·阿方西 / 朱利亚娜·洛约迪切 / 亚美利哥·丰塔尼 / 彼得·德·席尔瓦 / 弗朗西斯·古佐 / 拉法埃拉·莱博罗尼 / 克劳迪奥·阿方西 / 吉尔·巴罗尼 / 马西莫·比安奇 / 恩尼奥·孔萨尔维 / 吉安卡尔洛·科森蒂诺 / 阿伦·克雷格 / 汉尼斯·赫尔曼 / 弗兰科·梅斯科利尼 / 安东尼奥·普雷斯特 / 吉娜·诺维勒 / 理查德·塞梅尔 / 安德烈提多娜 / 迪尔克·范登贝格 / 奥梅罗·安东努蒂<br/>
+                        <span ><span>类型:</span><span> 剧情 </span></span>/剧情 / 喜剧 / 爱情 / 战争<br/>
+                        <span ><span>制片国家/地区:</span><span> 意大利</span></span><br/>
+                        <span ><span>语言:</span><span> 意大利语 </span></span>/意大利语 / 德语 / 英语<br/>
+                        <span ><span>上映日期:</span><span> 2020-01-03(中国大陆) </span></span>/2020-01-03(中国大陆) / 1997-12-20(意大利)<br/>
+                        <span ><span>片长:</span><span> 116分钟(国际版)</span></span>/116分钟(国际版)/ 125分钟<br/>
+                        <span ><span>又名:</span><span> 一个快乐的传说(港) </span></span>/一个快乐的传说(港) / Life Is Beautiful<br/>
+                        <span >IMDb:</span> tt0118799<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">简介：</br>犹太青年圭多（罗伯托·贝尼尼）邂逅美丽的女教师多拉（尼可莱塔·布拉斯基），他彬彬有礼的向多拉鞠躬：“早安！公主！”。历经诸多令人啼笑皆非的周折后，天遂人愿，两人幸福美满的生活在一起。</div>
+            </div>
+            
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">
+                    <h2>辛德勒的名单 Schindler's List</h2></br>
+                    <div class="col-xs-3 col-lg-3">
+                        <img src="/static/images/douban_movie/posters/tt0108052.jpg" alt="辛德勒的名单 Schindler's List"
+                            class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
+                        <span >豆瓣电影评分:</span> 9.6<br/>
+                        <span ><span>导演</span>: <span>史蒂文·斯皮尔伯格</span></span><br/>
+                        <span ><span>编剧</span>: <span>托马斯·肯尼利 </span></span>/托马斯·肯尼利 / 斯蒂文·泽里安<br/>
+                        <span ><span>主演</span>: <span>连姆·尼森 </span></span>/连姆·尼森 / 本·金斯利 / 拉尔夫·费因斯 / 卡罗琳·古多尔 / 乔纳森·萨加尔 / 艾伯丝·戴维兹 / 马尔戈萨·格贝尔 / 马克·伊瓦涅 / 碧翠斯·马科拉 / 安德烈·瑟韦林 / 弗里德里希·冯·图恩 / 克齐斯茨托夫·拉夫特 / 诺伯特·魏塞尔 / 维斯瓦夫·科马萨<br/>
+                        <span ><span>类型:</span><span> 剧情 </span></span>/剧情 / 历史 / 战争<br/>
+                        <span ><span>制片国家/地区:</span><span> 美国</span></span><br/>
+                        <span ><span>语言:</span><span> 英语 </span></span>/英语 / 希伯来语 / 德语 / 波兰语<br/>
+                        <span ><span>上映日期:</span><span> 1993-11-30(华盛顿首映) </span></span>/1993-11-30(华盛顿首映) / 1994-02-04(美国)<br/>
+                        <span ><span>片长:</span><span> 195分钟</span></span><br/>
+                        <span ><span>又名:</span><span> 舒特拉的名单(港) </span></span>/舒特拉的名单(港) / 辛德勒名单<br/>
+                        <span >IMDb:</span> tt0108052<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">简介：</br>1939年，波兰在纳粹德国的统治下，党卫军对犹太人进行了隔离统治。德国商人奥斯卡·辛德勒（连姆·尼森 Liam Neeson 饰）来到德军统治下的克拉科夫，开设了一间搪瓷厂，生产军需用品。凭着出众的社交能力和大量的金钱，辛德勒和德军建立了良好的关系，他的工厂雇用犹太人工作，大发战争财。</div>
+            </div>
+            
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">
+                    <h2>霸王别姬</h2></br>
+                    <div class="col-xs-3 col-lg-3">
+                        <img src="/static/images/douban_movie/posters/tt0106332.jpg" alt="霸王别姬"
+                            class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
+                        <span >豆瓣电影评分:</span> 9.6<br/>
+                        <span ><span>导演</span>: <span>陈凯歌</span></span><br/>
+                        <span ><span>编剧</span>: <span>芦苇 </span></span>/芦苇 / 李碧华<br/>
+                        <span ><span>主演</span>: <span>张国荣 </span></span>/张国荣 / 张丰毅 / 巩俐 / 葛优 / 英达 / 蒋雯丽 / 吴大维 / 吕齐 / 雷汉 / 尹治 / 马明威 / 费振翔 / 智一桐 / 李春 / 赵海龙 / 李丹 / 童弟 / 沈慧芬 / 黄斐 / 徐杰<br/>
+                        <span ><span>类型:</span><span> 剧情 </span></span>/剧情 / 爱情 / 同性<br/>
+                        <span ><span>制片国家/地区:</span><span> 中国大陆 </span></span>/中国大陆 / 中国香港<br/>
+                        <span ><span>语言:</span><span> 汉语普通话</span></span><br/>
+                        <span ><span>上映日期:</span><span> 1993-07-26(中国大陆) </span></span>/1993-07-26(中国大陆) / 1993-01-01(中国香港)<br/>
+                        <span ><span>片长:</span><span> 171分钟</span></span>/171分钟/ 155分钟(美国剧场版)<br/>
+                        <span ><span>又名:</span><span> 再见，我的妾 </span></span>/再见，我的妾 / Farewell My Concubine / Adieu Ma Concubine<br/>
+                        <span >IMDb:</span> tt0106332<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">简介：</br>段小楼（张丰毅）与程蝶衣（张国荣）是一对打小一起长大的师兄弟，两人一个演生，一个饰旦，一向配合天衣无缝，尤其一出《霸王别姬》，更是誉满京城，为此，两人约定合演一辈子《霸王别姬》。但两人对戏剧与人生关系的理解有本质不同，段小楼深知戏非人生，程蝶衣则是人戏不分。</div>
+            </div>
+            
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">
+                    <h2>泰坦尼克号 Titanic</h2></br>
+                    <div class="col-xs-3 col-lg-3">
+                        <img src="/static/images/douban_movie/posters/tt0120338.jpg" alt="泰坦尼克号 Titanic"
+                            class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="col-xs-9 col-lg-9">
+                        <span >豆瓣电影评分:</span> 9.5<br/>
+                        <span ><span>导演</span>: <span>詹姆斯·卡梅隆</span></span><br/>
+                        <span ><span>编剧</span>: <span>詹姆斯·卡梅隆</span></span><br/>
+                        <span ><span>主演</span>: <span>莱昂纳多·迪卡普里奥 </span></span>/莱昂纳多·迪卡普里奥 / 凯特·温丝莱特 / 比利·赞恩 / 凯西·贝茨 / 弗兰西丝·费舍 / 格劳瑞亚·斯图尔特 / 比尔·帕克斯顿 / 伯纳德·希尔 / 大卫·沃纳 / 维克多·加博 / 乔纳森·海德 / 苏茜·爱米斯 / 刘易斯·阿伯内西 / 尼古拉斯·卡斯柯恩 / 阿那托利·萨加洛维奇 / 丹尼·努齐 / 杰森·贝瑞 / 伊万·斯图尔特 / 艾恩·格拉法德 / 乔纳森·菲利普斯 / 马克·林赛·查普曼 / 理查德·格拉翰 / 保罗·布赖特威尔 / 艾瑞克·布里登 / 夏洛特·查顿 / 博纳德·福克斯 / 迈克尔·英塞恩 / 法妮·布雷特 / 马丁·贾维斯 / 罗莎琳·艾尔斯 / 罗切尔·罗斯 / 乔纳森·伊万斯-琼斯 / 西蒙·克雷恩 / 爱德华德·弗莱彻 / 斯科特·安德森 / 马丁·伊斯特 / 克雷格·凯利 / 格雷戈里·库克 / 利亚姆·图伊 / 詹姆斯·兰开斯特 / 艾尔莎·瑞雯 / 卢·帕尔特 / 泰瑞·佛瑞斯塔 / 凯文·德·拉·诺伊<br/>
+                        <span ><span>类型:</span><span> 剧情 </span></span>/剧情 / 爱情 / 灾难<br/>
+                        <span ><span>制片国家/地区:</span><span> 美国 </span></span>/美国 / 墨西哥<br/>
+                        <span ><span>语言:</span><span> 英语 </span></span>/英语 / 意大利语 / 德语 / 俄语<br/>
+                        <span ><span>上映日期:</span><span> 1998-04-03(中国大陆) </span></span>/1998-04-03(中国大陆) / 2023-04-03(中国大陆重映) / 1997-11-01(东京电影节) / 1997-12-19(美国)<br/>
+                        <span ><span>片长:</span><span> 194分钟</span></span>/194分钟/ 227分钟(白星版)<br/>
+                        <span ><span>又名:</span><span> 铁达尼号(港</span></span>/铁达尼号(港/台)<br/>
+                        <span >IMDb:</span> tt0120338<br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-xs-12 col-lg-12">简介：</br>1912年4月10日，号称 “世界工业史上的奇迹”的豪华客轮泰坦尼克号开始了自己的处女航，从英国的南安普顿出发驶往美国纽约。富家少女罗丝（凯特•温丝莱特）与母亲及未婚夫卡尔坐上了头等舱；另一边，放荡不羁的少年画家杰克（莱昂纳多·迪卡普里奥）也在码头的一场赌博中赢得了下等舱的船票。</div>
+            </div>
+            
+        </div>
+        <div id="sLaOuol2SM0iFj4d" hidden>5f685274073b</div>
+        <script type="text/javascript" src="/static/js/h03/i7KQc.js"></script>
+        
+<footer class="row" style="margin-top: 40px;height: 40px;line-height: 40px;">
+    <p class="text-center"><a href="https://beian.miit.gov.cn/" target="_blank" title="Spiderbuf ICP备案号" style="text-decoration: none;"><span
+                style="color: #A4B1CD;">粤ICP备2021093459.</span></a>
+        <span>All rights reserved.</span>
+        <a href="/about" target="_blank" title="关于Spiderbuf" style="color: #A4B1CD;text-decoration: none;">关于我们</a>
+        <a href="/privacy" target="_blank" title="Spiderbuf网站隐私政策" style="color: #A4B1CD;text-decoration: none;">隐私政策</a>
+    </p>
+</footer>
+
+    </div>
+    <!-- /container -->
+    
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script defer src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script defer src="/static/js/utils.js"></script>
+
+</body>
+
+</html>
