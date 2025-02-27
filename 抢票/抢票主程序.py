@@ -70,7 +70,7 @@ class RailwayBot:
         self.driver.find_element(By.ID, "train_date").send_keys(Keys.END)
         self.driver.find_element(By.ID, "train_date").clear()
         # 选择乘车的日期
-        self.driver.find_element(By.ID, "train_date").send_keys("2025-02-05")
+        self.driver.find_element(By.ID, "train_date").send_keys("2025-02-12")
         self.driver.find_element(By.ID, "train_date").send_keys(Keys.RETURN)
         self.driver.find_element(By.ID, "query_ticket").click()
         time.sleep(2)
